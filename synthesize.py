@@ -166,9 +166,9 @@ if __name__ == "__main__":
     preprocess_config, model_config, train_config = get_configs_of(args.dataset)
     configs = (preprocess_config, model_config, train_config)
     path_tag = "_{}".format(args.path_tag) if args.path_tag != "" else args.path_tag
-    train_config["path"]["ckpt_path"] = train_config["path"]["ckpt_path"] + "_{}".format(path_tag)
-    train_config["path"]["log_path"] = train_config["path"]["log_path"] + "_{}".format(path_tag)
-    train_config["path"]["result_path"] = train_config["path"]["result_path"] + "_{}".format(path_tag)
+    train_config["path"]["ckpt_path"] = train_config["path"]["ckpt_path"] + "_{}".format(path_tag) if path_tag != '' else ''
+    train_config["path"]["log_path"] = train_config["path"]["log_path"] + "_{}".format(path_tag) if path_tag != '' else ''
+    train_config["path"]["result_path"] = train_config["path"]["result_path"] + "_{}".format(path_tag) if path_tag != '' else ''
     if preprocess_config["preprocessing"]["pitch"]["pitch_type"] == "cwt":
         from utils.pitch_tools import get_lf0_cwt
         preprocess_config["preprocessing"]["pitch"]["cwt_scales"] = get_lf0_cwt(np.ones(10))[1]
