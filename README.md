@@ -120,10 +120,10 @@ The loss curves, synthesized mel-spectrograms, and audios are shown.
 ## Citation
 
 ```bibtex
-@article{
+@article{ko2023adversarial
     title={Adversarial Training of Denoising Diffusion Model Using Dual Discriminators for High-Fidelity Multi-Speaker TTS},
     author={Ko, Myeongjin and Choi, Yong-Hoon},
-    journal={},
+    journal={arXiv preprint arXiv:2308.01573},
     year={2023}
 }
 ```
